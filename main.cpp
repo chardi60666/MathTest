@@ -1,12 +1,10 @@
-#include <iostream>
-
 #include "MathTest.h"
 
 int main()
 {
-    MathTest test(5);
+    MathTest test(5, 1, 10, '+');
 
-    std::cout << "MathTest created successfully!" << std::endl;
+    test.run();
 
     return 0;
 }
