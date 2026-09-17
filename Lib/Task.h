@@ -1,0 +1,3 @@
+struct Task;
+
+class MathTest;
