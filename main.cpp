@@ -1,8 +1,12 @@
 #include <iostream>
 
+#include "MathTest.h"
+
 int main()
 {
-    std::cout << "Hello from MathTest!" << std::endl;
+    MathTest test(5);
+
+    std::cout << "MathTest created successfully!" << std::endl;
 
     return 0;
 }

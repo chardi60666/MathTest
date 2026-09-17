@@ -13,6 +13,8 @@ add_library(Lib STATIC
 # Основное приложение
 add_executable(MathTest
         main.cpp
+        MathTest.h
+        MathTest.cpp
 )
 
 target_link_libraries(MathTest PRIVATE Lib)
