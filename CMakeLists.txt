@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.30)
-
 project(MathTest)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -13,10 +12,11 @@ add_library(Lib STATIC
 # Основное приложение
 add_executable(MathTest
         main.cpp
+        MathTest.h
+        MathTest.cpp
 )
 
 target_link_libraries(MathTest PRIVATE Lib)
-
 
 # GoogleTest
 include(FetchContent)
@@ -31,12 +31,13 @@ FetchContent_MakeAvailable(googletest)
 # Тесты
 add_executable(GoogleTestTests
         tests/test_task.cpp
+        tests/test_mathtest.cpp
+        MathTest.cpp
 )
 
 target_link_libraries(GoogleTestTests
-        PRIVATE
+        gtest_main
         Lib
-        GTest::gtest_main
 )
 
 include(GoogleTest)

@@ -1,8 +1,10 @@
-#include <iostream>
+#include "MathTest.h"
 
 int main()
 {
-    std::cout << "Hello from MathTest!" << std::endl;
+    MathTest test(5, 1, 10, '+');
+
+    test.run();
 
     return 0;
 }
