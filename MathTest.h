@@ -19,6 +19,7 @@ public:
     bool check_answer(int index, int user_answer);
     int get_correct_answer(int index) const;
     void show_statistics() const;
+    char get_mark() const;
 };
 
 #endif
