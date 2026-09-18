@@ -29,18 +29,17 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 # Тесты
-add_executable(GoogleTests
+add_executable(GoogleTestTests
         tests/test_task.cpp
         tests/test_mathtest.cpp
         MathTest.cpp
 )
 
-target_link_libraries(GoogleTests
-        PRIVATE
+target_link_libraries(GoogleTestTests
+        gtest_main
         Lib
-        GTest::gtest_main
 )
 
 include(GoogleTest)
 
-gtest_discover_tests(GoogleTests)
+gtest_discover_tests(GoogleTestTests)
